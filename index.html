@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PDF Viewer</title>
+  </head>
+  <body>
+    <div id="pdfContainer">
+      <!-- The PDF will be loaded here -->
+    </div>
+
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById("pdfContainer");
+        const pdfFilePath = "Muhammad-Usama-Ali G.pdf"; // Update this with the actual path of your PDF file
+
+        // Use either 'embed' or 'object' element to load the PDF
+        container.innerHTML = `<embed src="${pdfFilePath}" type="application/pdf" width="100%" height="800px" />`;
+        // container.innerHTML = `<object data="${pdfFilePath}" type="application/pdf" width="100%" height="600px"></object>`;
+      });
+    </script>
+  </body>
+</html>
